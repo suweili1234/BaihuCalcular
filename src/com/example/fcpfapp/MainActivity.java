@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 	private Button acadaafa_btn,aaaerwet_btn,afryyu_btn;
 	private myHouseculateOnClickListener myHouse=new myHouseculateOnClickListener();
 	private MyOnFocusChangListener aaaawwewqeweq=new MyOnFocusChangListener();
-	private MyClearOnClickListener wrrewrteyyety=new MyClearOnClickListener();
+	private MyaallknkOnClickListener wrrewrteyyety=new MyaallknkOnClickListener();
 
 	
 	
@@ -42,23 +42,23 @@ public class MainActivity extends Activity {
 		/*findObjeck();*/
 		acadaafa_btn=(Button)findViewById(R.id.JiSuan);
 		afryyu_btn=(Button)findViewById(R.id.buttonexit);
-		aaaerwet_btn=(Button)findViewById(R.id.buttonclean);
-		aawertyy_view[0]=(TextView)findViewById(R.id.TextViewJJ);
-		aawertyy_view[1]=(TextView)findViewById(R.id.TextViewAB);
-		aawertyy_view[2]=(TextView)findViewById(R.id.TextViewJGBin);
-		aawertyy_view[3]=(TextView)findViewById(R.id.TextViewJGDing);
 		aeettxte[0][0]=(EditText)findViewById(R.id.edthnJia);
-		aeettxte[0][1]=(EditText)findViewById(R.id.edthnYi);
-		aeettxte[0][2]=(EditText)findViewById(R.id.edthnBin);
-		aeettxte[0][3]=(EditText)findViewById(R.id.edthnDing);
-		aeettxte[1][0]=(EditText)findViewById(R.id.edttnJia);
-		aeettxte[1][1]=(EditText)findViewById(R.id.edttnYi);
 		aeettxte[1][2]=(EditText)findViewById(R.id.edttnBin);
 		aeettxte[1][3]=(EditText)findViewById(R.id.edttnDing);
 		aeettxte[2][0]=(EditText)findViewById(R.id.edthxJia);
 		aeettxte[2][1]=(EditText)findViewById(R.id.edthxYi);
 		aeettxte[2][2]=(EditText)findViewById(R.id.edthxBin);
+		aeettxte[0][1]=(EditText)findViewById(R.id.edthnYi);
+		aeettxte[0][2]=(EditText)findViewById(R.id.edthnBin);
+		aeettxte[0][3]=(EditText)findViewById(R.id.edthnDing);
+		aeettxte[1][0]=(EditText)findViewById(R.id.edttnJia);
+		aeettxte[1][1]=(EditText)findViewById(R.id.edttnYi);
 		aeettxte[2][3]=(EditText)findViewById(R.id.edthxDing);
+		aaaerwet_btn=(Button)findViewById(R.id.buttonclean);
+		aawertyy_view[0]=(TextView)findViewById(R.id.TextViewJJ);
+		aawertyy_view[1]=(TextView)findViewById(R.id.TextViewAB);
+		aawertyy_view[2]=(TextView)findViewById(R.id.TextViewJGBin);
+		aawertyy_view[3]=(TextView)findViewById(R.id.TextViewJGDing);
 		pgracoaka=(RadioGroup)findViewById(R.id.radioGroup1);
 		babatjeaagj=(RadioButton)findViewById(R.id.radio10);
 		agaagsta=(EditText)findViewById(R.id.eiextprice);
@@ -85,6 +85,13 @@ public class MainActivity extends Activity {
 		// TODO Auto-generated method stub
 		
 	}*/
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 	private void init()
 	{
 		for(int i=0;i<3;i++)
@@ -110,12 +117,7 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 		}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
+	
 	
 	public void onClick(View v) {
 				
@@ -145,7 +147,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void onCheckedChanged(RadioGroup group,int checkedId)
 		{
-			clear();
+			aallknk();
 			boolean tag;
 			if(babatjeaagj.getId()==checkedId){
 			OK=3;
@@ -163,16 +165,16 @@ public class MainActivity extends Activity {
 			adidas.setEnabled(tag);
 		}
 	}
-	 class MyClearOnClickListener implements View.OnClickListener{
+	 class MyaallknkOnClickListener implements View.OnClickListener{
 
 		@Override
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
-			clear();
+			aallknk();
 		}
 
 	}
-	 private void clear()
+	 private void aallknk()
 	 {
 		 for(int i =0;i<3;i++)
 		 {
